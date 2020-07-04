@@ -1,0 +1,121 @@
+// Vital.css imports
+@import "vital/normalize";
+@import "vital/variables";
+$body: #f8f9fa;
+$grid-padding: 0.5%;
+$code: "Courier New", "Monaco", Menlo, monospace;
+@import "vital/mixins";
+// @import "vital/icons";
+// Because all of the CSS will be internal to the html, Vital's icon tags (<svg>, <style>, <path>) mess up the browser's parsing of the stylesheet.
+$icon-arrow-updown: 'data:image/svg+xml;utf8';
+$icon-check-inverse: 'data:image/svg+xml;utf8';
+$icon-clock: 'data:image/svg+xml;utf8';
+$icon-close: 'data:image/svg+xml;utf8';
+$icon-close-empty: 'data:image/svg+xml;utf8';
+$icon-close-empty-white: 'data:image/svg+xml;utf8';
+$icon-close-outline: 'data:image/svg+xml;utf8';
+$icon-menu: 'data:image/svg+xml;utf8';
+$icon-menu-white: 'data:image/svg+xml;utf8';
+@import "vital/grid";
+@import "vital/base";
+@import "vital/buttons";
+// @import "vital/footer";
+@import "vital/forms";
+// @import "vital/header";
+// @import "vital/heroes";
+@import "vital/loaders";
+@import "vital/notice";
+// @import "vital/pagination";
+// @import "vital/tables";
+// @import "vital/tabs";
+@import "vital/syntax";
+@import "vital/helpers";
+@import "vital/layouts/feed_cards";
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    line-height: 200%;
+}
+.header { 
+    // background-color: $header-background-color;
+    background-color: black;
+    font-family: $code;
+    // h1 { font-weight: bolder; }
+    a {
+        // color: $text;
+        color: white;
+    }
+}
+.feed-card {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.85em;
+    * { margin: 0; }
+}
+
+/* Visibility classes for responsive layout */
+.show-small {
+    display: none;
+    @media screen and (max-width: $phablet)  { display: unset; }
+}
+.hide-small { @media screen and (max-width: $phablet)  { display: none; } }
+
+/* Servers-list header */
+#slhead {
+    font-weight: bolder;
+}
+
+/* Servers-list rows */
+.server {
+    /* Vertical-align elements in each row */
+    .serverwrap {
+        @media screen and (min-width: $phablet)  {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    /* Button size same height as input */
+    .btn {
+        padding: 0;
+        min-height: $input-height;
+    }
+
+    /* Buttons stay on one line instead of expanding for small screens */
+    .server-buttons .col { @media screen and (max-width: $phablet) { display: table-cell; } }
+
+    /* Input areas fill width and don't add top/bottom padding */
+    input {
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 100%;
+    }
+
+    /* Bold labels, as the table headers are */
+    .show-small { font-weight: bolder; };
+
+    .finalized { line-height: 1.8; }
+
+    /* Visibility classes for drafting mode (input) versus finalized mode (display) */
+    &.drafting .finalized { display: none; }
+    &.finalized .drafting { display: none; }
+}
+  
+
+// div#slbody {  // hack to avoid https://github.com/ireade/gulp-email-workflow/issues/4
+//     line-height: 2;
+//     input, span {
+//         padding: 0 0.5em;  // TODO fix this
+//         margin: 0.25em 0;
+//     }
+//     input {
+//         min-height: unset;
+//         @media screen and (max-width: $phablet) { padding: .5em .5em; }
+//     }
+//    
+// }
+
+
+// input, select, textarea, button, .btn {
+//   margin: 0.25em 0;
+// }

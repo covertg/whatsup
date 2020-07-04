@@ -1,0 +1,76 @@
+<div id="servers-list" class="row">
+    <!-- <div class="section padded"> -->
+    <div class="section">
+        <!-- <h2>servers to test:</h2> -->
+        <div id="slhead" class="hide-small feed-card">
+            <div class="col-1-4">Server Name</div>
+            <div class="col-1-4">Server URL</div>
+            <div class="col-1-4">Status</div>
+            <div class="col-1-4"><!-- Test/Save and Remove --></div>
+            <div class="clear"></div>
+        </div>
+        <div id="slbody">
+        <!-- <div id="slbody" class="full-width-forms"> -->
+            <template id="template-server">
+                <div id="server0" class="drafting server feed-card">
+                    <div class="serverwrap">
+                        <div class="col-1-4">
+                            <span class="finalized show-small">Server Name: </span><span class="finalized server-name"></span>
+                            <input class="drafting input-name" type="text" placeholder="Enter server name">
+                        </div>
+                        <div class="col-1-4">
+                            <span class="finalized show-small">Server URL: </span><a class="finalized server-url" href=""></a>
+                            <input class="drafting input-url" type="url" placeholder="Enter server address">
+                        </div>
+                        <div class="col-1-4">
+                            <span class="finalized show-small">Connection Status: </span><span class="server-status hide-small"></span>
+                            <span class="finalized server-loading-ico small"></span>
+                        </div>
+                        <div class="col-1-4 server-buttons">
+                            <div class="autogrid">
+                                <div class="drafting col"><button class="server-save full btn" type="button">✅ Save</button></div>
+                                <div class="finalized col"><button class="server-test full btn" type="button">👩‍🔬 Test</button></div>
+                                <div class="col"><button class="server-remove full btn red" type="button">⛔ Remove</button></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div id="slfoot">
+            <div class="row">
+                <div class="section">
+                    <button id="add-server" class="btn solid green full" onclick="newServerLine()">➕ New Server Entry</button>
+                    <button id="test-all" class="btn solid black full" onclick="testAllServers()">🌐 Test All</button>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="section">
+                    <button id="save" class="btn ">💾 Save</button>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<!-- <div class="row notice">
+    <div class="section">
+        <div class="notice-message">
+            <div class="notice-text">Notice: (1) We assume that the servers are connected (2) </div>
+            <div class="notice-dismiss">❌</div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="notice-message">
+            <div class="notice-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</div>
+        </div>
+    </div>
+</div> -->
+
+<!-- TODO
+Save file!! https://stackoverflow.com/questions/7271524/how-to-download-the-current-page-as-a-file-attachment-using-javascript
+Fix up sass styling and make higher contrast
+Footer element
+"How to" info
+-->
